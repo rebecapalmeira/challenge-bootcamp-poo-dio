@@ -1,7 +1,6 @@
 package com.dio.bootcampchallengepoo;
 
-import com.dio.bootcampchallengepoo.domain.Course;
-import com.dio.bootcampchallengepoo.domain.Mentorship;
+import com.dio.bootcampchallengepoo.domain.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -26,9 +25,24 @@ public class BootcampChallengePooApplication {
 
 		Mentorship mentorship1 = new Mentorship("Mentoria de Java Web", "Criando uma Aplicação RESTful", LocalDate.now());
 
-		System.out.println(course1);
-		System.out.println(course2);
-		System.out.println(mentorship1);
+//		System.out.println(course1);
+//		System.out.println(course2);
+//		System.out.println(mentorship1);
+
+		Bootcamp bootcamp1 = new Bootcamp();
+		bootcamp1.setName("Bootcamp Java Developer");
+		bootcamp1.setDescription("Descrição Bootcamp Java Developer");
+		bootcamp1.getSubjects().add(course1);
+		bootcamp1.getSubjects().add(course2);
+		bootcamp1.getSubjects().add(mentorship1);
+
+		Dev devRebeca = new Dev();
+		devRebeca.setName("Rebeca Palmeira");
+		devRebeca.subscribeToBootcamp(bootcamp1);
+
+		Dev devSara = new Dev();
+		devSara.setName("Sara Almeida");
+		devSara.subscribeToBootcamp(bootcamp1);
 
 	}
 
