@@ -10,7 +10,6 @@ import java.time.LocalDate;
 public class BootcampChallengePooApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(BootcampChallengePooApplication.class, args);
 
 		Course course1 = new Course();
